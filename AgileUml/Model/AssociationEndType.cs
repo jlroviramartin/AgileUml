@@ -13,6 +13,9 @@
 // limitations under the License.
 namespace AgileUml.Model
 {
+    /// <summary>
+    /// Type of association end.
+    /// </summary>
     public enum AssociationEndType
     {
         Composition,

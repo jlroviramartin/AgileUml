@@ -15,6 +15,9 @@ using System;
 
 namespace AgileUml.Model
 {
+    /// <summary>
+    /// Base class for all UML attributes.
+    /// </summary>
     public abstract class UmlAttribute : Attribute
     {
     }

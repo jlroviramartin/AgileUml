@@ -15,6 +15,10 @@ using System;
 
 namespace AgileUml.Model
 {
+    /// <summary>
+    /// Attribute that points out a member of a class and relates it with other member in an
+    /// associated class.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
     public class AssociationEndAttribute : UmlAttribute
     {
@@ -37,14 +41,20 @@ namespace AgileUml.Model
             this.Cardinality = cardinality;
         }
 
+        /// <summary>The name of the association.</summary>
         public string Name { get; set; }
 
+        /// <summary>The other end of the association.</summary>
         public Type OtherEnd { get; set; }
 
+        /// <summary>The name of the property on the <code>otherEnd</code> class, related to
+        /// this one.</summary>
         public string OtherProperty { get; set; }
 
+        /// <summary>The type of association end.</summary>
         public AssociationEndType Type { get; set; } = AssociationEndType.None;
 
+        /// <summary>The cardinality of association end.</summary>
         public int[] Cardinality { get; set; }
     }
 }

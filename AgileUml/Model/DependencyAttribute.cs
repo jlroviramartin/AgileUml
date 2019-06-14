@@ -16,6 +16,9 @@ using System.Diagnostics.Contracts;
 
 namespace AgileUml.Model
 {
+    /// <summary>
+    /// Attribute that documents a dependency to another class.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = true)]
     public class DependencyAttribute : Attribute
     {
@@ -31,8 +34,10 @@ namespace AgileUml.Model
             this.Name = name;
         }
 
+        /// <summary>The supplier of the dependency.</summary>
         public Type Supplier { get; set; }
 
+        /// <summary>The name of the dependency.</summary>
         public string Name { get; set; }
     }
 }

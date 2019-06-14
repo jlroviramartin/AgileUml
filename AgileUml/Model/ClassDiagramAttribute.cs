@@ -15,6 +15,10 @@ using System;
 
 namespace AgileUml.Model
 {
+    /// <summary>
+    /// This attribute configures which members of a class/interface are included in
+    /// a diagram.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = true)]
     public class ClassDiagramAttribute : UmlAttribute
     {

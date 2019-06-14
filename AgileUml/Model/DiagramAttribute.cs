@@ -15,6 +15,10 @@ using System;
 
 namespace AgileUml.Model
 {
+    /// <summary>
+    /// This attribute configures which classes/members of a assembly/module are included in
+    /// a diagram.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Module, AllowMultiple = true)]
     public class DiagramAttribute : UmlAttribute
     {
